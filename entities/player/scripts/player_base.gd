@@ -29,7 +29,9 @@ func character_movement(delta: float) -> void:
 	# Handle Jump.		
 	if Input.is_action_just_pressed("a_jump") and _current_jump < number_jumps:
 		_current_jump += 1
-		velocity.y = jump_strength
+		
+		if jump_strength > velocity.y:
+			velocity.y = jump_strength
 			
 
 	# Get the input direction and handle the movement/deceleration.

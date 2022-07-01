@@ -2,5 +2,5 @@
 Hello, this is a simple First Person template using CharacterBody3D (KinematicBody), feel free to use.
 
 ## Info
- - Requires Godot 4.0 (Alpha 10)
+ - Requires Godot 4.0 (Alpha 11)
  - MIT License

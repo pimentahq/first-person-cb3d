@@ -12,10 +12,21 @@ var _current_jump := 0
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+func _input(event: InputEvent):
+	mouse_movement(event)
+	
 func _physics_process(delta: float) -> void:
 	character_movement(delta)
 
 
+
+func mouse_movement(event: InputEvent) -> void:
+	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		rotation.x -= event.relative.y * mouse_sensitivity
+		rotation.x = clamp(rotation.x, deg2rad(-80), deg2rad(80))
+
+		rotation.y -= event.relative.x * mouse_sensitivity
+		rotation.y = wrapf(rotation.y, 0, deg2rad(360))
 
 func character_movement(delta: float) -> void:
 	# Add the gravity.

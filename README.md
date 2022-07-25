@@ -4,3 +4,6 @@ Hello, this is a simple First Person template using CharacterBody3D (KinematicBo
 ## Info
  - Requires Godot 4.0 (Alpha 12+)
  - MIT License
+ 
+### Donate ❤
+- https://ko-fi.com/pimentahq
